@@ -1,0 +1,29 @@
+{
+  "authHabilitada": false,
+  "apiBaseUrlLocal": "http://localhost:8080",
+  "proveedores": [
+    {
+      "id": "azure",
+      "nube": "Azure",
+      "idaas": "Microsoft Entra External ID",
+      "apiManager": "Azure API Management",
+      "apiBaseUrl": "https://APIM_NOMBRE.azure-api.net",
+      "apimSubscriptionKey": "",
+      "issuer": "https://TENANT_ID.ciamlogin.com/TENANT_ID/v2.0",
+      "discoveryUrl": "https://SUBDOMINIO.ciamlogin.com/TENANT_ID/v2.0/.well-known/openid-configuration",
+      "clientId": "CLIENT_ID_ENTRA",
+      "scope": "openid profile email offline_access api://CLIENT_ID_ENTRA/pedidos.access"
+    },
+    {
+      "id": "aws",
+      "nube": "AWS",
+      "idaas": "Amazon Cognito",
+      "apiManager": "AWS API Gateway",
+      "apiBaseUrl": "https://API_ID.execute-api.REGION.amazonaws.com",
+      "issuer": "https://cognito-idp.REGION.amazonaws.com/USER_POOL_ID",
+      "clientId": "CLIENT_ID_COGNITO",
+      "scope": "openid profile email",
+      "logoutUrl": "https://DOMINIO_COGNITO.auth.REGION.amazoncognito.com/logout?client_id=CLIENT_ID_COGNITO&logout_uri=https://URL_FRONTEND/"
+    }
+  ]
+}
