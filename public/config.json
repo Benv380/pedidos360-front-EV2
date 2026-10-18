@@ -1,13 +1,13 @@
 {
   "authHabilitada": false,
-  "apiBaseUrlLocal": "http://localhost:8080",
+  "apiBaseUrlLocal": "https://pedidos360-apim-benja.azure-api.net",
   "proveedores": [
     {
       "id": "azure",
       "nube": "Azure",
       "idaas": "Microsoft Entra External ID",
       "apiManager": "Azure API Management",
-      "apiBaseUrl": "https://APIM_NOMBRE.azure-api.net",
+      "apiBaseUrl": "https://pedidos360-apim-benja.azure-api.net",
       "apimSubscriptionKey": "",
       "issuer": "https://TENANT_ID.ciamlogin.com/TENANT_ID/v2.0",
       "discoveryUrl": "https://SUBDOMINIO.ciamlogin.com/TENANT_ID/v2.0/.well-known/openid-configuration",
