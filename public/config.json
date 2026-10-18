@@ -1,29 +1,28 @@
 {
-  "authHabilitada": false,
-  "apiBaseUrlLocal": "https://pedidos360-apim-benja.azure-api.net",
+  "authHabilitada": true,
+  "apiBaseUrlLocal": "http://localhost:8080",
   "proveedores": [
     {
       "id": "azure",
       "nube": "Azure",
-      "idaas": "Microsoft Entra External ID",
+      "idaas": "Amazon Cognito (IDaaS compartido)",
       "apiManager": "Azure API Management",
       "apiBaseUrl": "https://pedidos360-apim-benja.azure-api.net",
-      "apimSubscriptionKey": "",
-      "issuer": "https://TENANT_ID.ciamlogin.com/TENANT_ID/v2.0",
-      "discoveryUrl": "https://SUBDOMINIO.ciamlogin.com/TENANT_ID/v2.0/.well-known/openid-configuration",
-      "clientId": "CLIENT_ID_ENTRA",
-      "scope": "openid profile email offline_access api://CLIENT_ID_ENTRA/pedidos.access"
+      "issuer": "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_I5Mm0voNI",
+      "clientId": "7m86tlt309sojlv0imqa9j6f5e",
+      "scope": "openid email profile",
+      "logoutUrl": "https://pedidos360-benja.auth.us-east-1.amazoncognito.com/logout?client_id=7m86tlt309sojlv0imqa9j6f5e&logout_uri=https%3A%2F%2Fpedidos360frontbenja.z1.web.core.windows.net%2F"
     },
     {
       "id": "aws",
       "nube": "AWS",
       "idaas": "Amazon Cognito",
       "apiManager": "AWS API Gateway",
-      "apiBaseUrl": "https://API_ID.execute-api.REGION.amazonaws.com",
-      "issuer": "https://cognito-idp.REGION.amazonaws.com/USER_POOL_ID",
-      "clientId": "CLIENT_ID_COGNITO",
-      "scope": "openid profile email",
-      "logoutUrl": "https://DOMINIO_COGNITO.auth.REGION.amazoncognito.com/logout?client_id=CLIENT_ID_COGNITO&logout_uri=https://URL_FRONTEND/"
+      "apiBaseUrl": "https://c5ess9i1ok.execute-api.us-east-1.amazonaws.com",
+      "issuer": "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_I5Mm0voNI",
+      "clientId": "7m86tlt309sojlv0imqa9j6f5e",
+      "scope": "openid email profile",
+      "logoutUrl": "https://pedidos360-benja.auth.us-east-1.amazoncognito.com/logout?client_id=7m86tlt309sojlv0imqa9j6f5e&logout_uri=https%3A%2F%2Fpedidos360frontbenja.z1.web.core.windows.net%2F"
     }
   ]
 }
